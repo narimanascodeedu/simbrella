@@ -1,0 +1,139 @@
+.vacancy-header {
+  min-height: 1px;
+  padding: 120px 0 40px;
+  //   background-color: #fff;
+  //   position: relative;
+  & div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    & .info-side {
+      display: block;
+      width: calc(45% - 40px);
+      & h1 {
+        padding: 0 0 32px;
+        margin-left: 15px;
+        font-size: 32px;
+        line-height: 1.29;
+        font-weight: bold;
+        letter-spacing: 0.01em;
+        color: #222;
+      }
+      & .text {
+        display: block;
+        & p {
+          padding: 0 0 20px;
+          // padding: 0 0 60px;
+          font-size: 18px;
+          line-height: 1.56;
+          color: #5f6773;
+        }
+      }
+    }
+    & .image {
+      width: 55%;
+      & img {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+.vacanciees-grid {
+  padding: 100px 0;
+  background: #f6f8fe;
+  & div {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-gap: 30px 30px;
+    grid-auto-rows: 1fr;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    & article {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: stretch;
+      align-items: center;
+      padding: 40px 20px;
+      background: #fff;
+      border: 1px solid #ff931e;
+      border-radius: 4px;
+      position: relative;
+      animation-duration: 0.15s;
+      transition: all 0.15s linear;
+    }
+    & article:hover {
+      background-color: $link-hover-color;
+      cursor: pointer;
+    }
+    & article:hover h3 {
+      color: #fff;
+    }
+    & article:hover p {
+      color: #fff;
+    }
+  }
+}
+footer {
+  min-height: 1px;
+  padding: 34px 0 34px;
+  background-image: none;
+  background-color: black;
+  & .footer-last {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
+    &__jis {
+      display: flex;
+      justify-content: flex-start;
+      align-content: stretch;
+      align-items: center;
+      & p {
+        padding: 0 10px 0 0;
+        font-size: 12px;
+        line-height: 2.67;
+        color: #fff;
+      }
+      & a {
+        display: inline-block;
+        padding: 0 0 0 30px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 2.67;
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+      }
+      & a::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(https://www.simbrella.com/site/templates/img/jis_logo.svg)
+          no-repeat 0 0;
+        position: absolute;
+        left: 0;
+        top: calc(50% - 10px);
+      }
+    }
+    &__copyright {
+      width: calc(100% - 360px);
+      font-size: 16px;
+      line-height: 1.5;
+      color: #999;
+    }
+  }
+}

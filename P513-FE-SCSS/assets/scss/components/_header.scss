@@ -1,0 +1,106 @@
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  transition: 0.15s linear;
+  &__container {
+    @include flexbox(center, space-between);
+    // @include containerStyle();
+    padding: 20px 20px 20px;
+    max-width: 1140px;
+    margin: 0 auto;
+    // height: 80px;
+    transition: 0.15s linear;
+    &__logo {
+      &__link {
+        display: inline-block;
+        width: 154px;
+        height: 53px;
+
+        &__image {
+          width: 100%;
+          height: 100%;
+        }
+        &__image-blue {
+          display: none
+        }
+      }
+    }
+    &__nav {
+      &__list {
+        @include flexbox(center, space-between);
+        list-style-type: none;
+        &__list-item {
+          padding-left: 35px;
+
+          &__link {
+            font-style: inherit;
+            font-size: 14px;
+            text-decoration: none;
+            line-height: 1.41;
+            color: #eee;
+            padding: 8px 0;
+            transition: 0.15s linear;
+          }
+          &__link:hover {
+            color: $link-hover-color;
+          }
+        }
+      }
+    }
+  }
+}
+.sticky {
+  // height: 80px;
+  // padding: 0 0 0;
+
+  background-color: white;
+  & .header__container {
+    padding: 10px 20px 10px;
+    &__logo {
+      &__link {
+        display: inline-block;
+        width: 154px;
+        height: 53px;
+        &__image {
+          display: none;
+        }
+        &__image-blue {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &__nav {
+      &__list {
+        &__list-item {
+          &__link {
+            color: black;
+          }
+          &__link:hover {
+            color: $link-hover-color;
+          }
+        }
+      }
+    }
+  }
+}
+// @media only screen and (max-width: 1022px) {
+//   .header {
+//     &__container {
+//       &__logo {
+        
+
+//       }
+//     }
+//   }
+//   .header__container__nav {
+//     &__list {
+//       display: block;
+//     }
+//   }
+//   .first-company-section__text__wrapper__scroll-link__span {
+//     display: none;
+//   }
+// }
